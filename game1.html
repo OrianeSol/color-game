@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Rectangle Game</title>
@@ -48,18 +48,52 @@
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
+#div1, #div2, #div3, #div4 {
+          float: left;
+          width: 100px;
+          height: 35px;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid black;
+}
+
+#div1 , #div2, #div3, #div4{
+        border: 5px solid red; /* Set the initial border color */
+}
 
 
   </style>
 </head>
 <body>
-     <div style = "text-align:center;">
-         <p id="demo" > count down!!!</p>
-         <br />
-         <button onclick="myStopFunction()" class="button-55" role="button">Stop time</button>
-         <br />
-         <canvas id="myCanvas" width="1000" height="500" class="canvas"> </canvas>
-      </div>   
-      <script src="game1.js"></script> 
+    <div style="text-align:center;">
+        <p id="demo"> count down!!!</p>
+        <br />
+        <button onclick="myStopFunction()" class="button-55" role="button">Stop time</button>
+        <br />
+        <canvas id="myCanvas" width="1000" height="500" class="canvas"> </canvas>
+    </div>
+
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/red-color-solid-background-1920x1080.png"
+             draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="35">
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/blue-color-solid-background-1920x1080.png"
+             draggable="true" ondragstart="drag(event)" id="drag2" width="100" height="35">
+    </div>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/pastel-yellow-color-solid-background-1920x1080.png"
+             draggable="true" ondragstart="drag(event)" id="drag3" width="100" height="35">
+    </div>
+    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8intuGKDQ8egsawbahaWJ9t30fslB0nqDLnq1Mkcjxkp7XMba_8EZ0POyxfiVsEGeDcU&usqp=CAU"
+             draggable="true" ondragstart="drag(event)" id="drag4" width="100" height="35">
+    </div>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <!--<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
+    <script src="game1.js"></script>
 </body>
 </html>
