@@ -1,4 +1,4 @@
-
+ 
 // JavaScript source code
 //timer
 const myInterval = setInterval(myTimer, 1000);
@@ -20,8 +20,8 @@ function myTimer() {
     document.getElementById("demo").innerHTML = formattedTime;
 
     if (distance < 0) {
-        document.getElementById("demo").innerHTML = "ahhhh!";
-        clearInterval(x);
+        document.getElementById("demo").innerHTML = "youre time is up!";
+        clearInterval(100);
     }
 }
 
@@ -48,14 +48,39 @@ function getMousePos(canvas, evt) {
 }
 
 
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+//    ctx.addEventListener("drop", drop);
+//    ctx.addEventListener("drag", drag);
+
+
 function Rectangle(x, y, width, height, fillColor, outlineColor) {
     const ctx = document.getElementById('myCanvas').getContext('2d');
+
+
+
     ctx.fillStyle = fillColor;
     ctx.fillRect(x, y, width, height);
 
     ctx.strokeStyle = outlineColor;
     ctx.lineWidth = 8;
     ctx.strokeRect(x + 1, y + 1, width - 2, height - 2);
+
+   
+
 }
 
 function randomColor(colors, lastColors) {
@@ -90,4 +115,3 @@ Rectangle(400, 240, 190, 90, "white", "grey");
 Rectangle(400, 340, 190, 90, color2, color4);
 Rectangle(190, 240, 190, 90, color3, color1);
 Rectangle(610, 240, 190, 90, color4, color3);
-
