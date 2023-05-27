@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightpink;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .article {
+            max-width: 400px;
+            padding: 20px;
+            background-color: skyblue;
+            text-align: center;
+            font-family: Comic Sans MS, sans-serif;
+            font-size: 1rem;
+        }
+
+            .article h1 {
+                font-size: 20px;
+            }
+
+            .article h2 {
+                font-size: 15px;
+            }
+
+            .article p {
+                font-size: 13px;
+            }
+
+        .gameputtuons {
+            background-color: mediumpurple;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            cursor: pointer;
+            width: 300px;
+            height: 250px;
+            font-family: Comic Sans MS, sans-serif;
+            font-size: 1rem;
+            box-shadow: rgba(0, 0, 0, .8) 15px 30px 30px -18px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .gameputtuons:hover {
+                transform: translateY(-10px);
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <article class="article">
+            <h1 style="color: yellow; text-shadow: 1px 1px 0 black; font-family: Copperplate, sans-serif;">The color-game!</h1>
+
+            <article class="browser">
+                <h2>How to start playing? </h2>
+
+                <p>To start playing the Color-game press the “start “button pleaced right. </p>
+            </article>
+            <article class="browser">
+                <h2>What is the point of the game? </h2>
+                <p>After you press “start” you will be followed to another page that contains the game itself, in the game you will have 4+ rectangles, each one containing one color inside and one color outside (in the out line) your goal is to organize all of the inside colors rectangles with the outlines.</p>
+            </article>
+            <article class="browser">
+                <h2>What is the difficulty?</h2>
+                <p>
+                    In level-1
+                    In the game, you will be facing a timer, each time you success the timer seconds will go down by one second.
+                    <br />
+                    <br />
+                    In level -2
+                    In this level you will face a different problem, each time you successfully manage to organize all of the inside colors rectangles with the outlines you will have another rectangle in a new color popping up.
+                </p>
+            </article>
+            <article class="browser">
+                <h2>What happens when I win? </h2>
+                <p>
+                    When you win, you will get a pop up message saying you won. If you win in level-1 you will get permission to go to level-2 , else, you will get a pop up message with your score at each level.
+                </p>
+            </article>
+        </article>
+        <div class="gameputtuons" onclick="goToPage('game1.html')">
+            <h2>Start playing!</h2>
+            <p>To start playing click here ! enjoy the game , good luck .</p>
+        </div>
+
+        <div class="gameputtuons" onclick="goToPage('color-game(ideapage).html')">
+            <h2>I have an idea!</h2>
+            <p>
+                In case you have an idea for our game, we will be happy to knew about it !
+                write it down over here 😊
+
+            </p>
+        </div>
+
+
+        <script>
+            function goToPage(url) {
+                window.location.href = url;
+            }
+        </script>
+
+    </div>
+
+
+
+
+</body>
+</html>
