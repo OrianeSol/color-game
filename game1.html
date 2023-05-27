@@ -1,12 +1,30 @@
 <!DOCTYPE html>
+<!--v1.2 -->
 <html>
 <head>
   <title>Rectangle Game</title>
   <style>
+
+      body {
+          background-color: lightpink;
+      }
      .canvas{
          background-image: url('yy.jpg');
          margin:auto;
      }
+
+      .container {
+          position: relative;
+      }
+
+      .background-pdf {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+      }
 
 .button-55 {
   align-self: center;
@@ -29,14 +47,7 @@
   outline: none;
   padding: .75rem;
   text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+ 
 }
 
 .button-55:hover {
@@ -47,53 +58,63 @@
 .button-55:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
+        #div1,
+        #div2,
+        #div3,
+        #div4 {
+            width: 100px;
+            height: 35px;
+            position: absolute;
+        }
 
-#div1, #div2, #div3, #div4 {
-          float: left;
-          width: 100px;
-          height: 35px;
-          margin: 10px;
-          padding: 10px;
-          border: 1px solid black;
-}
 
 #div1 , #div2, #div3, #div4{
-        border: 5px solid red; /* Set the initial border color */
+         border: 5px solid red; /* Set the initial border color and size */
+        height: 90px; /* Set the height of the element */
+      border-color: black; /* Set the border color */
+       width: 190px;
 }
 
 
   </style>
 </head>
 <body>
+
+
+
     <div style="text-align:center;">
         <p id="demo"> count down!!!</p>
         <br />
-        <button onclick="myStopFunction()" class="button-55" role="button">Stop time</button>
+        <button class="button-55" onclick="goToFrontPage()">Go back to front page</button>
         <br />
-        <canvas id="myCanvas" width="1000" height="500" class="canvas"> </canvas>
+        <canvas id="myCanvas" width="1000" height="500" class="canvas">
+        </canvas>
     </div>
 
 
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img src="https://htmlcolorcodes.com/assets/images/colors/red-color-solid-background-1920x1080.png"
-             draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="35">
+    <div id="div1" style="left: 738.5px; top: 354.5px;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://www.color-name.com/color-image?c=FF7779&square"
+             draggable="true" ondragstart="drag(event)" id="drag1" width="190" height="90">
     </div>
-    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img src="https://htmlcolorcodes.com/assets/images/colors/blue-color-solid-background-1920x1080.png"
-             draggable="true" ondragstart="drag(event)" id="drag2" width="100" height="35">
+    <div id="div2" style="left: 529px; top: 253px;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://www.travelandleisure.com/thmb/KTIha5CLifSoUD3gx0YP51xc3rY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue0517-4dfc85cb0200460ab717b101ac07888f.jpg"
+             draggable="true" ondragstart="drag(event)" id="drag2" width="190" height="90">
     </div>
-    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="div3" style="left: 529px; top: 456px;" ondrop="drop(event)" ondragover="allowDrop(event)">
         <img src="https://htmlcolorcodes.com/assets/images/colors/pastel-yellow-color-solid-background-1920x1080.png"
-             draggable="true" ondragstart="drag(event)" id="drag3" width="100" height="35">
+             draggable="true" ondragstart="drag(event)" id="drag3" width="190" height="90">
     </div>
-    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8intuGKDQ8egsawbahaWJ9t30fslB0nqDLnq1Mkcjxkp7XMba_8EZ0POyxfiVsEGeDcU&usqp=CAU"
-             draggable="true" ondragstart="drag(event)" id="drag4" width="100" height="35">
+    <div id="div4" style="left: 320px; top: 354.5px;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/light-green-color-solid-background-1920x1080.png"
+             draggable="true" ondragstart="drag(event)" id="drag4" width="190" height="90">
     </div>
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <!--<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
+    <div id="div1" style="left: 529px; top:354.5px;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+   
+    <div class="button" onclick="goToPage('color-game(newlinked).html')">
+        <h2>go back to the front page</h2>
+        <p>To go back to the front pageclick here !</p>
+    </div>
+
     <script src="game1.js"></script>
 </body>
 </html>

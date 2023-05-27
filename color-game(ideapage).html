@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: Highlight;
+        }
+
+        .gameputtuons {
+            background-color: mediumpurple;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            cursor: pointer;
+            width: 200px;
+            height: 250px;
+            font-family: Comic Sans MS, sans-serif;
+            font-size: 1rem;
+            box-shadow: rgba(0, 0, 0, .8) 15px 30px 30px -18px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .gameputtuons:hover {
+                transform: translateY(-10px);
+            }
+
+        .start {
+            width: 300px;
+            height: 610px;
+            background-color: lightpink;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .zero {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+
+        .three {
+            margin: 0;
+        }
+
+        .two {
+            margin-top: 10px;
+        }
+
+        .one {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="start">
+        <h2>write your idea! :)</h2>
+        <div class="contact-info">
+            <form action="/action_page.php">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" <br>
+
+                <br />
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br><br>
+
+                <input type="radio" id="sex2" name="are you male/female" value="Male">
+                <label for="Male">Male</label><br>
+                <input type="radio" id="sex1" name="are you male/female" value="Female">
+                <label for="Female">Female</label><br>
+
+                <label for="fname">Write your idea:</label><br>
+                <input type="text" id="idea" name="ideas" style="width: 200px; height: 180px;"><br>
+                <br />
+                <input type="submit" value="Submit">
+            </form>
+            <p> Wow! That great, our company is really excited to know what is your idea, your idea is important to our firm and we would like you to share it. We promise that your we be safe with us and you will have full Copyright agreement and will provide 1.2% out of the profits. </p>
+        </div>
+    </div>
+    <div class="gameputtuons" onclick="goToPage('game1.html')">
+        <h2>Start playing!</h2>
+        <p>To start playing click here ! enjoy the game , good luck .</p>
+    </div>
+    <div class="gameputtuons" onclick="goToPage('color-game(newlinked).html')">
+        <h2>go back to the front page</h2>
+        <p>To go back to the front pageclick here ! thank you for youre idea!</p>
+    </div>
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>
